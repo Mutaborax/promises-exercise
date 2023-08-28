@@ -1,20 +1,30 @@
 body {
-  background-color: #ff6e40; /* Change to any color you like */
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  justify-content: center;
+  height: 100vh;
   margin: 0;
+  background-color: beige; /* Change to any color */
+}
+
+#draw-card {
+  position: fixed;
+  top: 20%;
 }
 
 #card-image {
-position: relative;
-width: 200px;
-height: 300px;
+  margin-top: 10px;
+  position: relative;
+  width: 200px;
+  height: 300px;
 }
 
 #card-image img {
-position: absolute;
-left: 0;
-top: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: rotate(-3deg); /* Adjust per image */
+  z-index: 1; /* Adjust per image */
+  /* The next card will have rotate(-6deg) and z-index: 2, and so on ... */
 }
